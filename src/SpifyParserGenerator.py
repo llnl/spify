@@ -387,7 +387,7 @@ class {IFPName} : public spify::parser
             if o in param and param[o] != None:
                  def_val_str = re.sub("'","",str(param[o]))
                  def_val_str = re.sub("{","\n#{\n#",str(def_val_str))
-                 def_val_str = re.sub(",\ *",",\n#",str(def_val_str))
+                 def_val_str = re.sub(", *",",\n#",str(def_val_str))
                  def_val_str = re.sub("}","\n#}",str(def_val_str))
                  out_str += "#Optional with default value of: "
                  out_str+= "{0}\n".format(def_val_str)
